@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --accent-blue: #F97316;
+    --bg-dark: #0A0A0A;
+    --text-gray: #A0A0A0;
+    --nav-height: 80px;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* 背景装饰：全屏图片 + 渐变遮罩 */
+.bg-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        linear-gradient(to bottom, rgba(10, 10, 10, 0.7) 0%, rgba(10, 10, 10, 0.95) 100%),
+        url('../assets/images/Home-background.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+
+    filter: blur(8px) brightness(0.6);
+    transform: scale(1.1);
+}
+
+.bg-gradient-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center,
+            rgba(10, 10, 10, 0.2) 0%,
+            rgba(10, 10, 10, 0.7) 50%,
+            rgba(10, 10, 10, 1) 100%);
+    z-index: -1;
+}
+
+
+/* 导航链接动效 */
+nav a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-blue);
+    transition: width 0.3s ease;
+
+    content: none !important;
+}
+
+.nav-actions-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* 调整此数值可改变简历按钮与图标组之间的距离 */
+}
+
+nav a:hover::after,
+nav a.nav-active::after {
+    width: 100%;
+}
+
+.nav-underline {
+    position: absolute;
+    bottom: -10px;
+    /* 调整横线与文字的距离 */
+    height: 2px;
+    background-color: #F97316;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+}
+
+#main-nav a.active {
+    color: white;
+}
+
+/* 页面切换逻辑 */
+.page-content {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    transform: translateY(20px);
+    transition: opacity 0.45s ease, transform 0.45s ease, visibility 0.45s ease;
+}
+
+.page-content.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    position: relative;
+    transform: translateY(0);
+    z-index: 2;
+}
+
+.page-content.leaving {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    transform: translateY(10px);
+    z-index: 1;
+}
+
+.page-content.entering {
+    opacity: 0;
+    visibility: visible;
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    transform: translateY(20px);
+    z-index: 1;
+}
+
+/* 按钮通用样式 */
+.btn-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 24px;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-pill:hover {
+    border-color: var(--accent-blue);
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 163, 255, 0.2);
+}
+
+/* 滚动指示器样式 */
+.scroll-indicator {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+
+
+
+.social-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* 调整此数值可改变图标相互之间的距离 */
+}
+
+/* 圆形社交图标按钮样式 (参考 image_1850a9.png) */
+.social-circle-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+}
+
+.social-circle-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+}
+
+/* ==========================================
+   项目卡片统一组件类 (修改此处即可影响所有卡片)
+   ========================================== */
+
+.project-card-inner {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(23, 23, 23, 0.4);
+    backdrop-filter: blur(4px);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+/* 悬停时的光效与边框调整 */
+.project-card:hover .project-card-inner {
+    border-color: rgba(249, 115, 22, 0.8);
+    box-shadow: 0 0 40px rgba(249, 115, 22, 0.6);
+    transform: translateY(-8px);
+    border-width: 4px;
+}
+
+.project-card-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    transition: transform 0.7s ease;
+}
+
+.project-card:hover .project-card-bg {
+    transform: scale(1.1);
+}
+
+.project-card-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(to top, black, rgba(0, 0, 0, 0.2), transparent);
+}
+
+.project-card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem;
+    transform: translateY(45%);
+    transition: transform 0.25s ease-in-out;
+    background: linear-gradient(to top, black, rgba(0, 0, 0, 0.95), transparent);
+}
+
+.project-card:hover .project-card-content {
+    transform: translateY(0);
+}
+
+.project-card-description {
+    opacity: 0;
+    transition: opacity 0.5s ease 0.1s;
+    font-size: 0.875rem;
+    color: #a3a3a3;
+    line-height: 1.625;
+    margin-top: 1rem;
+}
+
+.project-card:hover .project-card-description {
+    opacity: 1;
+}
+
+/* 入场动画 */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: revealAnim 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes revealAnim {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .vertical-text {
+        font-size: 3rem;
+        left: 10px;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+}
