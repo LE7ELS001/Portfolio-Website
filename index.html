@@ -26,7 +26,8 @@
     <!-- 导航栏 -->
     <header class="fixed top-0 left-0 w-full z-50 px-6 md:px-12 py-6 flex justify-between items-center">
         <!-- Logo -->
-        <div class="flex items-center space-x-3 cursor-pointer">
+        <div class="flex items-center space-x-3 cursor-pointer"
+            onclick="navigateTo('home', document.querySelector('#main-nav a'))">
             <div class="font-black text-2xl tracking-tighter leading-none">
                 HE <span class="text-[#F97316] block md:inline">JUNMING</span>
             </div>
@@ -146,27 +147,33 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 -mx-4 md:-mx-16 lg:-mx-24">
 
                     <!-- 项目卡片 1：现在只需要使用定义的组件类 -->
-                    <div class="project-card group">
-                        <div class="project-card-inner">
-                            <div class="project-card-bg bg-neutral-800"></div>
-                            <div class="project-card-overlay"></div>
-                            <div class="project-card-content">
-                                <div class="mb-2">
-                                    <h4 class="text-2xl font-black uppercase text-white leading-tight">ESCAPE-02</h4>
-                                    <p class="text-[10px] text-[#F97316] font-bold uppercase tracking-widest mt-1">In
-                                        progress</p>
+                    <a onclick="goToPage('assets/gamePage/Escape-02/escape-02.html')">
+                        <div class="project-card group">
+                            <div class="project-card-inner">
+                                <div class="project-card-bg bg-neutral-800">
+                                    <img src="/assets/images/levelDesign/Escape02/card.png" alt="Escape-02 Screenshot"
+                                        class="w-full h-full object-cover">
                                 </div>
-                                <div class="project-card-description">
-                                    <p>Unseen is a game I worked on for eight months with a team of ten developers
-                                        during my
-                                        final year of
-                                        my master's. I mainly contributed as a level designer and gameplay programmer.
-                                    </p>
+                                <div class="project-card-overlay"></div>
+                                <div class="project-card-content">
+                                    <div class="mb-2">
+                                        <h4 class="text-2xl font-black uppercase text-white leading-tight">ESCAPE-02
+                                        </h4>
+                                        <p class="text-[10px] text-[#F97316] font-bold uppercase tracking-widest mt-1">
+                                            In
+                                            progress</p>
+                                    </div>
+                                    <div class="project-card-description">
+                                        <p>A linear level created in Hammer Editor, focused on combat and exploration,
+                                            built
+                                            around a looping structure that
+                                            reconnects spaces through shortcuts. Developed as an individual project.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
+                    </a>
                     <!-- 项目卡片 2 -->
                     <div class="project-card group">
                         <div class="project-card-inner">
@@ -236,9 +243,12 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
                     <!-- 卡片 1 -->
-                    <div class="project-card group">
+                    <a class="project-card group block" onclick="goToPage('assets/gamePage/Escape-02/escape-02.html')">
                         <div class="project-card-inner">
-                            <div class="project-card-bg bg-neutral-800"></div>
+                            <div class="project-card-bg bg-neutral-800">
+                                <img src="/assets/images/levelDesign/Escape02/card.png" alt="Escape-02 Screenshot"
+                                    class="w-full h-full object-cover">
+                            </div>
                             <div class="project-card-overlay"></div>
                             <div class="project-card-content">
                                 <div class="mb-2">
@@ -248,13 +258,13 @@
                                     </p>
                                 </div>
                                 <div class="project-card-description">
-                                    <p>A Hammer Editor level currently in development, focused on combat encounters,
-                                        player navigation, and
-                                        environmental storytelling.</p>
+                                    <p>A linear level created in Hammer Editor, focused on combat and exploration, built
+                                        around a looping structure that
+                                        reconnects spaces through shortcuts. Developed as an individual project.</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
                     <!-- 卡片 2 -->
                     <div class="project-card group">
