@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Dungeon-01 | Project Detail</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../../css/style.css" />
+    <style>
+        .bg-overlay {
+            background: rgba(10, 10, 10, 0.85);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bg-overlay"></div>
+
+    <header class="fixed top-0 left-0 w-full z-50 px-6 md:px-12 py-6 flex justify-between items-center">
+        <div class="flex items-center space-x-3 cursor-pointer"
+            onclick="window.location.href='https://le7els001.github.io/Portfolio-Website'">
+            <div class="font-black text-2xl tracking-tighter leading-none">
+                HE <span class="text-[#F97316] block md:inline">JUNMING</span>
+            </div>
+        </div>
+
+        <a href="https://le7els001.github.io/Portfolio-Website/?view=projects" class="btn-pill">
+            Back
+        </a>
+    </header>
+
+    <main class="px-6 md:px-20 py-32">
+        <div class="max-w-[1100px] mx-auto">
+
+            <!-- Title -->
+            <section class="mb-16">
+                <p class="text-sm uppercase tracking-[0.2em] text-[#F97316] mb-4">Level Design</p>
+                <h1 class="text-4xl md:text-6xl font-black uppercase text-white mb-6">
+                    A Dungeon-01
+                </h1>
+                <p class="text-lg text-gray-300 max-w-[800px] leading-relaxed">
+                    Phaser Game - A level focused on exploration and reveal the hidden reward
+                </p>
+            </section>
+
+            <!-- Info -->
+            <section class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-20">
+                <div>
+                    <h2 class="text-sm uppercase tracking-[0.2em] text-white/70 mb-3">Role</h2>
+                    <p class="text-gray-300">Level Design</p>
+                </div>
+                <div>
+                    <h2 class="text-sm uppercase tracking-[0.2em] text-white/70 mb-3">Tools</h2>
+                    <p class="text-gray-300">Tiled</p>
+                </div>
+                <div>
+                    <h2 class="text-sm uppercase tracking-[0.2em] text-white/70 mb-3">Status</h2>
+                    <p class="text-gray-300">Completed</p>
+                </div>
+                <div>
+                    <h2 class="text-sm uppercase tracking-[0.2em] text-white/70 mb-3">Focus</h2>
+                    <p class="text-gray-300">Exploration </p>
+                </div>
+                <div>
+                    <h2 class="text-sm uppercase tracking-[0.2em] text-white/70 mb-3">Credits</h2>
+                    <p class="text-gray-300">Individual Project</p>
+                </div>
+            </section>
+
+            <!-- Main Media -->
+            <section class="mb-20">
+                <div class="rounded-2xl overflow-hidden border border-white/10 min-h-[420px]">
+                    <iframe class="w-full h-[420px]" src="https://www.youtube.com/embed/8q29ntgx7vI?si=aw-kC-sSMruwv-Sv"
+                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+                    </iframe>
+                </div>
+            </section>
+
+            <!-- Overview -->
+            <section class="mb-20">
+                <h2 class="text-2xl md:text-3xl font-black uppercase text-white mb-6">Overview</h2>
+                <p class="text-gray-300 leading-relaxed text-lg">
+                    This project is a top-down action-adventure level focused on exploration. The level is built around
+                    hidden treasure chests that are revealed through player exploration and interaction with the
+                    environment.
+                </p>
+            </section>
+
+            <!-- Design Goal -->
+            <section class="mb-20">
+                <h2 class="text-2xl md:text-3xl font-black uppercase text-white mb-6">Design Goal</h2>
+                <p class="text-gray-300 leading-relaxed text-lg">
+                    The goal of this level is to create a short (3–5 minute) dungeon experience inspired by classic
+                    Zelda-style gameplay.
+                    The level is designed to encourage exploration through systems such as character upgrades, hidden
+                    treasure chests, and
+                    combat encounters.
+                </p>
+            </section>
+
+            <!-- Process -->
+            <section class="mb-20">
+                <h2 class="text-2xl md:text-3xl font-black uppercase text-white mb-8">Design Process</h2>
+
+                <div class="space-y-16">
+
+                    <!-- Step 1 -->
+                    <div>
+                        <p class="text-sm uppercase tracking-[0.2em] text-[#F97316] mb-3">1</p>
+                        <h3 class="text-xl md:text-2xl font-bold text-white mb-4">List Available Elements</h3>
+
+                        <div
+                            class="rounded-2xl overflow-hidden border border-white/10 bg-white/5 min-h-[420px] flex items-center justify-center p-6">
+
+                            <img src="../../../assets/images/levelDesign/ADungeon01/element.png" alt="Level Screenshot"
+                                class="max-h-[420px] w-auto mx-auto cursor-pointer object-contain zoomable">
+                        </div>
+
+                        <p class="text-gray-300 leading-relaxed text-lg">
+                            At this stage, I define the core elements of the level while also evaluating the available
+                            development time and scope.
+                            Since this project was built from scratch, there was flexibility to introduce new mechanics.
+                            However, due to time
+                            constraints, it was important to balance the deadline with feasibility
+
+                            I focused on a small set of core mechanics, such as combat, character upgrades, player
+                            interactions with objects, and
+                            revealing hidden chests, to support the design goal, while avoiding adding too many extra
+                            features that could impact
+                            completion.
+                        </p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div>
+                        <p class="text-sm uppercase tracking-[0.2em] text-[#F97316] mb-3">2</p>
+                        <h3 class="text-xl md:text-2xl font-bold text-white mb-4">Sequences</h3>
+
+                        <div
+                            class="rounded-2xl overflow-hidden border border-white/10 bg-white/5 min-h-[420px] flex items-center justify-center p-6">
+
+                            <img src="../../../assets/images/levelDesign/ADungeon01/sequence.png" alt="Level Screenshot"
+                                class="max-h-[420px] w-auto mx-auto cursor-pointer object-contain zoomable">
+                        </div>
+
+                        <p class="text-gray-300 leading-relaxed text-lg">
+                            At this stage, I define a sequence to guide the player’s learning and progression through
+                            the level. The focus is on
+                            gradually introducing core mechanics and helping the player understand how the game works.
+
+                            Early on, the player learns how to interact with objects. The level then introduces the idea
+                            of hidden chests and
+                            encourage player to explore the area.
+
+                            As the level progresses, the player learns that objects can also be used against enemies,
+                            followed by combat encounters
+                            that teach the basics of fighting.
+
+                            Enemy placement is used to create a gradual difficulty curve, while also reflecting player
+                            progression through
+                            exploration.
+                        </p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div>
+                        <p class="text-sm uppercase tracking-[0.2em] text-[#F97316] mb-3">3</p>
+                        <h3 class="text-xl md:text-2xl font-bold text-white mb-4">Layout Sketches</h3>
+
+                        <div
+                            class="rounded-2xl overflow-hidden border border-white/10 bg-white/5 min-h-[420px] flex items-center justify-center p-6">
+
+                            <img src="../../../assets/images/levelDesign/ADungeon01/sketches.jpeg"
+                                alt="Level Screenshot"
+                                class="max-h-[420px] w-auto mx-auto cursor-pointer object-contain zoomable">
+                        </div>
+
+                        <p class="text-gray-300 leading-relaxed text-lg">
+                            At this stage, I translate the sequence into layout sketches to test whether the overall
+                            structure makes sense. I look
+                            at whether the player might be forced into unnecessary backtracking, and whether the layout
+                            feels clear and easy to
+                            navigate.
+
+                            I also evaluate whether exploration points are noticeable enough, so players can recognize
+                            unusual areas and investigate
+                            them.
+
+                            At the same time, I evaluate the pace between exploration and combat, including how many
+                            enemies and hidden chests are
+                            placed throughout the level.
+                        </p>
+                    </div>
+
+
+
+                    <!-- Step 4 -->
+                    <div>
+                        <p class="text-sm uppercase tracking-[0.2em] text-[#F97316] mb-3">4</p>
+                        <h3 class="text-xl md:text-2xl font-bold text-white mb-4">Implementation and Iteration</h3>
+
+                        <div class="image-slider" data-slider>
+                            <button class="slider-btn prev" type="button" data-prev>&#10094;</button>
+
+                            <div class="slider-track">
+                                <img src="../../../assets/images/levelDesign/ADungeon01/tiled1.png"
+                                    alt="Practice screenshot 1" class="slider-image active cursor-pointer">
+                                <img src="../../../assets/images/levelDesign/ADungeon01/tiled2.png"
+                                    alt="Practice screenshot 2" class="slider-image cursor-pointer">
+
+                            </div>
+
+                            <button class="slider-btn next" type="button" data-next>&#10095;</button>
+
+                            <div class="slider-dots">
+                                <button class="dot active" type="button" data-dot="0"></button>
+                                <button class="dot" type="button" data-dot="1"></button>
+
+                            </div>
+                        </div>
+
+                        <p class="text-gray-300 leading-relaxed text-lg">
+                            At this stage, I implement and iterate on the level in Tiled based on the layout sketches.
+                            The focus is on testing
+                            whether the level actually supports the exploration-driven design goal.
+
+                            I adjust factors such as camera distance, level scale, and collision. Camera distance and
+                            level size affect whether
+                            players can notice points of interest as they move through the level.
+
+                            I also test collision to determine the minimum width a path needs in order for the player to
+                            move through it. This
+                            becomes a baseline reference for defining the overall scale and proportions of the level.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Breakdown -->
+            <section class="mb-20">
+                <h2 class="text-2xl md:text-3xl font-black uppercase text-white mb-8">Some design approaches</h2>
+
+                <div class="space-y-10">
+
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">Teaching Through Gameplay
+                        </h3>
+
+                        <div class="image-slider" data-slider>
+                            <button class="slider-btn prev" type="button" data-prev>&#10094;</button>
+
+                            <div class="slider-track">
+                                <img src="../../../assets/images/levelDesign/ADungeon01/teach.png"
+                                    alt="Practice screenshot 1" class="slider-image active cursor-pointer">
+                                <img src="../../../assets/images/levelDesign/ADungeon01/teach2.png"
+                                    alt="Practice screenshot 2" class="slider-image cursor-pointer">
+                                <img src="../../../assets/images/levelDesign/ADungeon01/teach3.png"
+                                    alt="Practice screenshot 2" class="slider-image cursor-pointer">
+
+                            </div>
+
+                            <button class="slider-btn next" type="button" data-next>&#10095;</button>
+
+                            <div class="slider-dots">
+                                <button class="dot active" type="button" data-dot="0"></button>
+                                <button class="dot" type="button" data-dot="1"></button>
+                                <button class="dot active" type="button" data-dot="2"></button>
+
+
+                            </div>
+                        </div>
+
+
+                        <p class="text-gray-300 leading-relaxed">
+                            The level is designed to introduce core mechanics without explicit instructions.
+                            Players are first required to pick up a pot to progress, encouraging interaction with the
+                            environment.
+
+                            This interaction is reinforced in a second instance, allowing players to practice in a
+                            low-pressure situation.
+
+                            Finally, the mechanic is applied in a meaningful context, where the player must use the pot
+                            to reveal a hidden mechanism
+                            and move forward.
+
+                            This follows a “teach, practice, apply” structure, guiding the player through gameplay
+                            rather than explanation.
+                        </p>
+                    </div>
+
+
+
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">Emergent Learning through Interaction</h3>
+                        <div class="image-slider" data-slider>
+                            <button class="slider-btn prev" type="button" data-prev>&#10094;</button>
+
+                            <div class="slider-track">
+                                <img src="../../../assets/images/levelDesign/ADungeon01/fight.png"
+                                    alt="Practice screenshot 1" class="slider-image active cursor-pointer">
+                                <img src="../../../assets/images/levelDesign/ADungeon01/fight2.png"
+                                    alt="Practice screenshot 2" class="slider-image cursor-pointer">
+                            </div>
+
+                            <button class="slider-btn next" type="button" data-next>&#10095;</button>
+
+                            <div class="slider-dots">
+                                <button class="dot active" type="button" data-dot="0"></button>
+                                <button class="dot" type="button" data-dot="1"></button>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-300 leading-relaxed">
+                            Learning through interaction is used to introduce the offensive use of objects. By placing a
+                            pot as an obstacle, the
+                            player is required to pick it up to progress.
+
+                            An enemy is then positioned directly in front of the player, naturally prompting them to
+                            throw the object.
+
+                            This creates a situation where the player discovers that objects can be used as weapons
+                            through their own actions,
+                            reinforcing learning without explicit guidance.
+                        </p>
+                    </div>
+
+
+
+                </div>
+            </section>
+
+
+            <div class="image-gallery">
+
+                <img src="../../../assets/images/levelDesign/ADungeon01/gallery.png" alt="Level Screenshot"
+                    class="gallery-img">
+                <img src="../../../assets/images/levelDesign/ADungeon01/gallery2.png" alt="Level Screenshot"
+                    class="gallery-img">
+                <img src="../../../assets/images/levelDesign/ADungeon01/gallery3.png" alt="Level Screenshot"
+                    class="gallery-img">
+                <img src="../../../assets/images/levelDesign/ADungeon01/gallery4.png" alt=" Level Screenshot"
+                    class="gallery-img">
+                <img src="../../../assets/images/levelDesign/ADungeon01/gallery5.png" alt="Level Screenshot"
+                    class="gallery-img">
+
+            </div>
+
+
+            <!-- Reflection -->
+            <section class="mb-20">
+                <h2 class="text-2xl md:text-3xl font-black uppercase text-white mb-6 mt-12">Reflection</h2>
+                <p class="text-gray-300 leading-relaxed text-lg">
+                    Through this project, I learned that exploration-driven level design cannot rely only on assumptions
+                    about how players
+                    will behave. It is important to test the level and observe how players actually interact with it.
+
+                    During playtesting with classmates, only 4 players engaged with the level in a way that matched the
+                    intended
+                    exploration-focused experience. Some players focused mainly on combat, while others did not even
+                    realize that hidden
+                    chests existed.
+
+                    This highlighted the importance of allocating time for playtesting within the overall design
+                    process, ensuring that
+                    player behavior can be observed and design decisions can be adjusted accordingly.
+                </p>
+            </section>
+
+
+            <!-- Back -->
+            <section class='mt-12'>
+                <a href="https://le7els001.github.io/Portfolio-Website/?view=projects"
+                    class="btn-pill px-8 py-4 text-sm inline-flex">
+                    Back to Projects
+                </a>
+            </section>
+
+        </div>
+
+
+        <div id="lightbox" class="lightbox">
+            <span class="lightbox-close">&times;</span>
+            <img id="lightbox-img" class="lightbox-img" src="" alt="Expanded image">
+        </div>
+    </main>
+
+    <script src="../../../js/main.js"></script>
+</body>
+
+</html>
