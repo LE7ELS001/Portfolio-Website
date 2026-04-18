@@ -250,7 +250,7 @@ nav a.nav-active::after {
     background: linear-gradient(to top, black, rgba(0, 0, 0, 0.2), transparent);
 }
 
-.project-card-content {
+/* .project-card-content {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -259,23 +259,53 @@ nav a.nav-active::after {
     transform: translateY(45%);
     transition: transform 0.25s ease-in-out;
     background: linear-gradient(to top, black, rgba(0, 0, 0, 0.95), transparent);
+} */
+.project-card-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    padding-bottom: 0.75rem;
+    background: linear-gradient(to top, black, rgba(0, 0, 0, 0.9), transparent 55%);
+}
+
+.project-card-main {
+    min-height: 88px;
 }
 
 .project-card:hover .project-card-content {
     transform: translateY(0);
 }
 
-.project-card-description {
+/* .project-card-description {
     opacity: 0;
     transition: opacity 0.5s ease 0.1s;
     font-size: 0.875rem;
     color: #a3a3a3;
     line-height: 1.625;
     margin-top: 1rem;
+} */
+
+.project-card-description {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.65s ease, max-height 0.65s ease;
+    font-size: 0.875rem;
+    color: #a3a3a3;
+    line-height: 1.625;
+    margin-top: 0.75rem;
 }
+
+/* .project-card:hover .project-card-description {
+    opacity: 1;
+} */
 
 .project-card:hover .project-card-description {
     opacity: 1;
+    max-height: 120px;
 }
 
 /* 入场动画 */
