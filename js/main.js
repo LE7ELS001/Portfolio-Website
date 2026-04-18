@@ -218,6 +218,12 @@ window.onload = () => {
         navigateTo('projects', navProjects);
     }
 
+    if (view === 'articles') {
+        const navArticles = Array.from(document.querySelectorAll('#main-nav a'))
+            .find(link => link.innerText.toLowerCase().includes('articles'));
+        navigateTo('articles', navArticles);
+    }
+
 
 
     //image zoom
