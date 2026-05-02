@@ -28,8 +28,20 @@
         <!-- Logo -->
         <div class="flex items-center space-x-3 cursor-pointer"
             onclick="navigateTo('home', document.querySelector('#main-nav a'))">
-            <div class="font-black text-2xl tracking-tighter leading-none">
-                HE <span class="text-[#F97316] block md:inline">JUNMING</span>
+
+            <!-- Icon -->
+            <div class="w-12 h-12 flex items-center justify-center shrink-0">
+                <img src="assets/images/icons/mainIcon.png" alt="Logo" class="w-12 h-12 object-contain shrink-0">
+            </div>
+
+            <!-- Text -->
+            <div class="leading-tight">
+                <div class="font-black text-2xl tracking-tighter leading-none">
+                    HE <span class="text-[#F97316]">JUNMING</span>
+                </div>
+                <div class="text-sm font-medium text-white/80 mt-1">
+                    Design Portfolio
+                </div>
             </div>
         </div>
 
@@ -74,6 +86,76 @@
     </header>
 
     <main id="page-home" class="page-content active">
+
+        <section id="projects" class="relative pt-36 pb-32 px-6 md:px-20 bg-transparent reveal">
+            <div class="max-w-[1100px] mx-auto text-left">
+                <div class="flex justify-center mb-20 ">
+                    <h3
+                        class="text-5xl md:text-4.3xl font-black uppercase tracking-tighter text-white underline text-center">
+                        Personal
+                        Projects
+                    </h3>
+                </div>
+                <!-- 使用负外边距让卡片向左溢出，实现不对称美感 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                    <!-- 项目卡片 1：现在只需要使用定义的组件类 -->
+                    <a onclick="goToPage('assets/gamePage/Escape-02/escape-02.html')" class="block cursor-pointer">
+                        <div class="project-banner-card">
+
+                            <!-- Title Row -->
+                            <div class="project-banner-top">
+                                <div class="project-title-row">
+                                    <h4 class="project-banner-title">ESCAPE-02</h4>
+
+                                    <div class="project-banner-icons">
+                                        <img src="assets/images/levelDesign/Escape02/SourceEngine.png"
+                                            alt="Source Engine" class="project-banner-icon">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Image -->
+                            <div class="project-banner-image-wrapper">
+                                <img src="assets/images/levelDesign/Escape02/card2.png" alt="Escape-02 Screenshot"
+                                    class="project-banner-image">
+                            </div>
+
+                        </div>
+                    </a>
+                    <!-- 项目卡片 2 -->
+                    <a onclick="goToPage('assets/gamePage/Escape-01/escape-01.html')" class="block cursor-pointer">
+                        <div class="project-banner-card">
+
+                            <!-- Title Row -->
+                            <div class="project-banner-top">
+                                <div class="project-title-row">
+                                    <h4 class="project-banner-title">ESCAPE-01</h4>
+
+                                    <div class="project-banner-icons">
+                                        <img src="assets/images/levelDesign/Escape01/SourceEngine.png"
+                                            alt="Source Engine" class="project-banner-icon">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Image -->
+                            <div class="project-banner-image-wrapper">
+                                <img src="assets/images/levelDesign/Escape01/card.png" alt="Escape-01 Screenshot"
+                                    class="project-banner-image">
+                            </div>
+
+                        </div>
+                    </a>
+
+
+
+                </div>
+            </div>
+        </section>
+
+
+
         <!-- 首屏内容 (Hero Section) -->
         <section class="relative min-h-screen flex flex-col items-center justify-center text-center px-6">
 
@@ -105,6 +187,8 @@
             </div>
 
         </section>
+
+
 
         <!-- About Me 简介部分 (新增) -->
         <section id="about" class="relative py-32 px-6 md:px-20 bg-transparent reveal">
@@ -139,75 +223,7 @@
         </section>
 
 
-        <section id="projects" class="relative py-32 px-6 md:px-20 bg-transparent reveal">
-            <div class="max-w-4xl mx-auto text-left">
-                <div class="flex items-start mb-10">
-                    <h3 class="text-5xl md:text-3xl font-black uppercase tracking-tighter text-white">My Projects
-                    </h3>
-                </div>
-                <!-- 使用负外边距让卡片向左溢出，实现不对称美感 -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 -mx-4 md:-mx-16 lg:-mx-24">
 
-                    <!-- 项目卡片 1：现在只需要使用定义的组件类 -->
-                    <a onclick="goToPage('assets/gamePage/Escape-02/escape-02.html')">
-                        <div class="project-card group">
-                            <div class="project-card-inner">
-                                <div class="project-card-bg bg-neutral-800">
-                                    <img src="assets/images/levelDesign/Escape02/card.png" alt="Escape-02 Screenshot"
-                                        class="w-full h-full object-cover">
-                                </div>
-                                <div class="project-card-overlay"></div>
-                                <div class="project-card-content">
-                                    <div class="mb-2">
-                                        <h4 class="text-2xl font-black uppercase text-white leading-tight">ESCAPE-02
-                                        </h4>
-                                        <p class="text-[10px] text-[#F97316] font-bold uppercase tracking-widest mt-1">
-                                            In
-                                            progress</p>
-                                    </div>
-                                    <div class="project-card-description">
-                                        <p>A linear level created in Hammer Editor, focused on combat and exploration,
-                                            built
-                                            around a looping structure that
-                                            reconnects spaces through shortcuts. Developed as an individual project.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- 项目卡片 2 -->
-                    <a onclick="goToPage('assets/gamePage/Escape-01/escape-01.html')">
-                        <div class="project-card group">
-                            <div class="project-card-inner">
-                                <div class="project-card-bg bg-neutral-800">
-                                    <img src="assets/images/levelDesign/Escape01/card.png" alt="Escape-02 Screenshot"
-                                        class="w-full h-full object-cover">
-                                </div>
-                                <div class="project-card-overlay"></div>
-                                <div class="project-card-content">
-                                    <div class="mb-2">
-                                        <h4 class="text-2xl font-black uppercase text-white leading-tight">ESCAPE-01
-                                        </h4>
-                                        <p class="text-[10px] text-[#F97316] font-bold uppercase tracking-widest mt-1">
-                                            Completed
-                                        </p>
-                                    </div>
-                                    <div class="project-card-description">
-                                        <p>A level focused on multiple routes and approaches, where player choices lead
-                                            to
-                                            different situations and outcomes.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-
-
-                </div>
-            </div>
-        </section>
     </main>
 
 
@@ -217,69 +233,201 @@
 
 
     <!-- PROJECTS 页面 -->
-    <section id="page-projects" class="page-content px-6 md:px-20 py-32">
+    <section id="page-projects" class="page-content px-6 md:px-20 py-32 mt-25">
 
-        <div class="max-w-[1400px] mx-auto">
+        <div class="max-w-[1100px] mx-auto">
 
             <!-- ================= LEVEL DESIGN ================= -->
             <div class="mb-20">
-                <h2 class="text-2xl font-bold uppercase text-gray-400 mb-8 tracking-wider">
-                    Level Design
+                <h2 class="text-4xl font-bold uppercase text-white mb-8 tracking-wider text-center">
+                    Personal Projects
                 </h2>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
 
                     <!-- 卡片 1 -->
-                    <a class="project-card group block" onclick="goToPage('assets/gamePage/Escape-02/escape-02.html')">
-                        <div class="project-card-inner h-full">
-                            <div class="project-card-bg bg-neutral-800">
-                                <img src="assets/images/levelDesign/Escape02/card.png" alt="Escape-02 Screenshot"
-                                    class="w-full h-full object-cover">
-                            </div>
-                            <div class="project-card-overlay"></div>
-                            <div class="project-card-content">
-                                <div class="mb-2">
-                                    <h4 class="text-2xl font-black uppercase text-white leading-tight">ESCAPE-02</h4>
-                                    <p class="text-[10px] text-[#F97316] font-bold uppercase tracking-widest mt-1">
-                                        In Progress
-                                    </p>
-                                </div>
-                                <div class="project-card-description">
-                                    <p>A linear level created in Hammer Editor, focused on combat and exploration, built
-                                        around a looping structure that
-                                        reconnects spaces through shortcuts. Developed as an individual project.</p>
+                    <a onclick="goToPage('assets/gamePage/Escape-02/escape-02.html')" class="block cursor-pointer">
+                        <div class="project-banner-card">
+
+                            <!-- Title Row -->
+                            <div class="project-banner-top">
+                                <div class="project-title-row">
+                                    <h4 class="project-banner-title">ESCAPE-02</h4>
+
+                                    <div class="project-banner-icons">
+                                        <img src="assets/images/levelDesign/Escape02/SourceEngine.png"
+                                            alt="Source Engine" class="project-banner-icon">
+                                    </div>
                                 </div>
                             </div>
+
+                            <!-- Image -->
+                            <div class="project-banner-image-wrapper">
+                                <img src="assets/images/levelDesign/Escape02/card2.png" alt="Escape-02 Screenshot"
+                                    class="project-banner-image">
+                            </div>
+
                         </div>
                     </a>
 
                     <!-- 卡片 2 -->
-                    <div class="project-card group block"
-                        onclick="goToPage('assets/gamePage/Escape-01/escape-01.html')">
-                        <div class="project-card-inner h-full">
-                            <div class="project-card-bg bg-neutral-800">
+                    <a onclick="goToPage('assets/gamePage/Escape-01/escape-01.html')" class="block cursor-pointer">
+                        <div class="project-banner-card">
+
+                            <!-- Title Row -->
+                            <div class="project-banner-top">
+                                <div class="project-title-row">
+                                    <h4 class="project-banner-title">ESCAPE-01</h4>
+
+                                    <div class="project-banner-icons">
+                                        <img src="assets/images/levelDesign/Escape02/SourceEngine.png"
+                                            alt="Source Engine" class="project-banner-icon">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Image -->
+                            <div class="project-banner-image-wrapper">
                                 <img src="assets/images/levelDesign/Escape01/card.png" alt="Escape-01 Screenshot"
-                                    class="w-full h-full object-cover">
+                                    class="project-banner-image">
                             </div>
-                            <div class="project-card-overlay"></div>
-                            <div class="project-card-content">
-                                <div class="mb-2">
-                                    <h4 class="text-2xl font-black uppercase text-white leading-tight">ESCAPE-01</h4>
-                                    <p class="text-[10px] text-[#F97316] font-bold uppercase tracking-widest mt-1">
-                                        Completed
-                                    </p>
-                                </div>
-                                <div class="project-card-description">
-                                    <p>A level focused on multiple routes and approaches, where player choices lead
-                                        to
-                                        different situations and outcomes.</p>
-                                </div>
-                            </div>
+
                         </div>
-                    </div>
+                    </a>
+
 
                     <!-- 卡片 3 -->
-                    <div class="project-card group block"
+                    <a onclick="goToPage('assets/gamePage/UnityParkour/UnityParkour.html')"
+                        class="block cursor-pointer">
+                        <div class="project-banner-card">
+
+                            <!-- Title Row -->
+                            <div class="project-banner-top">
+                                <div class="project-title-row" style="gap: 0.1rem;">
+                                    <h4 class="project-banner-title">UNITY PARKOUR</h4>
+
+                                    <div class="project-banner-icons">
+                                        <img src="assets/images/icons/unity.png" alt="Unity" class="project-banner-icon"
+                                            style=" width: 100px; height: 64px;">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Image -->
+                            <div class="project-banner-image-wrapper">
+                                <img src="assets/images/Game/UnityParkour/card.png" alt="Unity Parkour Screenshot"
+                                    class="project-banner-image">
+                            </div>
+
+                        </div>
+                    </a>
+
+
+
+
+                    <!-- 卡片 4 -->
+                    <a onclick="goToPage('assets/gamePage/UnrealEngineActionGame/UnrealEngineActionGame.html')"
+                        class="block cursor-pointer">
+                        <div class="project-banner-card">
+
+                            <!-- Title Row -->
+                            <div class="project-banner-top">
+                                <div class="project-title-row" style="gap: 0.1rem;">
+                                    <h4 class="project-banner-title">ACTION GAME</h4>
+
+                                    <div class="project-banner-icons">
+                                        <img src="assets/images/icons/UE.png" alt="Unreal Engine"
+                                            class="project-banner-icon" style=" width: 120px; height: 64px;">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Image -->
+                            <div class="project-banner-image-wrapper">
+                                <img src="assets/images/Game/ActionGame/card.png"
+                                    alt="Unreal Engine Action Game Screenshot" class="project-banner-image">
+                            </div>
+
+                        </div>
+                    </a>
+
+                    <!-- 卡片 5 -->
+                    <a onclick="goToPage('assets/gamePage/Dungeon-01/dungeon-01.html')" class="block cursor-pointer">
+                        <div class="project-banner-card">
+
+                            <!-- Title Row -->
+                            <div class="project-banner-top">
+                                <div class="project-title-row" style="gap: 0.1rem;">
+                                    <h4 class="project-banner-title">DUNGEON-01</h4>
+
+                                    <div class="project-banner-icons">
+                                        <img src="assets/images/levelDesign/ADungeon01/Phaser_Logo.png" alt="Phaser"
+                                            class="project-banner-icon" style=" width: 100px; height: 64px;">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Image -->
+                            <div class="project-banner-image-wrapper">
+                                <img src="assets/images/levelDesign/ADungeon01/card.png" alt="Dungeon-01 Screenshot"
+                                    class="project-banner-image">
+                            </div>
+
+                        </div>
+                    </a>
+
+                    <!-- 卡片 6 -->
+                    <a onclick="goToPage('assets/gamePage/BlenderGN/BlenderGN.html')" class="block cursor-pointer">
+                        <div class="project-banner-card">
+
+                            <!-- Title Row -->
+                            <div class="project-banner-top">
+                                <div class="project-title-row" style="gap: 0.1rem;">
+                                    <h4 class="project-banner-title">Entanglement</h4>
+
+                                    <div class="project-banner-icons">
+                                        <img src="assets/images/icons/Blender.png" alt="Blender"
+                                            class="project-banner-icon" style=" width: 100px; height: 48px;">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Image -->
+                            <div class="project-banner-image-wrapper">
+                                <img src="assets/images/Blender/GN/card.png" alt="Entanglement Screenshot"
+                                    class="project-banner-image">
+                            </div>
+
+                        </div>
+                    </a>
+
+                    <!-- 卡片 7 -->
+                    <a onclick="goToPage('assets/gamePage/BlenderAnim/BlenderAnim.html')" class="block cursor-pointer">
+                        <div class="project-banner-card">
+
+                            <!-- Title Row -->
+                            <div class="project-banner-top">
+                                <div class="project-title-row" style="gap: 0.1rem;">
+                                    <h4 class="project-banner-title">Ouroboros</h4>
+
+                                    <div class="project-banner-icons">
+                                        <img src="assets/images/icons/Blender.png" alt="Blender"
+                                            class="project-banner-icon" style=" width: 100px; height: 48px;">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Image -->
+                            <div class="project-banner-image-wrapper">
+                                <img src="assets/images/Blender/Animation/card.png" alt="Ouroboros"
+                                    class="project-banner-image">
+                            </div>
+
+                        </div>
+                    </a>
+
+
+                    <!-- <div class="project-card group block"
                         onclick="goToPage('assets/gamePage/Dungeon-01/dungeon-01.html')">
                         <div class="project-card-inner h-full">
                             <div class="project-card-bg bg-neutral-800">
@@ -299,81 +447,13 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
 
-                </div>
-            </div>
-
-            <!-- ================= OTHER PROJECTS ================= -->
-            <div>
-                <h2 class="text-2xl font-bold uppercase text-gray-400 mb-8 tracking-wider">
-                    Other Projects
-                </h2>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-
-                    <!-- 卡片 1 -->
-                    <div class="project-card group block"
-                        onclick="goToPage('assets/gamePage/UnityParkour/UnityParkour.html')">
+                    <!-- <div class="project-card group block" onclick="goToPage('assets/gamePage/Vulpini/Vulpini.html')">
                         <div class="project-card-inner h-full">
                             <div class="project-card-bg bg-neutral-800">
-                                <img src="assets/images/Game/UnityParkour/card.png" alt="Escape-01 Screenshot"
-                                    class="w-full h-full object-cover">
-                            </div>
-                            <div class="project-card-overlay"></div>
-                            <div class="project-card-content">
-                                <div class="mb-2">
-                                    <h4 class="text-2xl font-black uppercase text-white leading-tight">UNITY · PARKOUR
-                                        PROTOTYPE
-                                    </h4>
-                                    <p class="text-[10px] text-[#F97316] font-bold uppercase tracking-widest mt-1">
-                                        Completed
-                                    </p>
-                                </div>
-                                <div class="project-card-description">
-                                    <p>A Unity prototype implementing basic parkour mechanics such as running, climbing,
-                                        and movement
-                                        control.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 卡片 2 -->
-                    <div class="project-card group block"
-                        onclick="goToPage('assets/gamePage/UnrealEngineActionGame/UnrealEngineActionGame.html')">
-                        <div class="project-card-inner h-full">
-                            <div class="project-card-bg bg-neutral-800">
-                                <img src="assets/images/Game/ActionGame/card.png" alt="Escape-01 Screenshot"
-                                    class="w-full h-full object-cover">
-                            </div>
-                            <div class="project-card-overlay"></div>
-                            <div class="project-card-content flex flex-col h-full">
-                                <div class="mb-2">
-                                    <h4 class="text-2xl font-black uppercase text-white leading-tight">UNREAL ENGINE 5 ·
-                                        TPS PROTOTYPE
-                                    </h4>
-
-                                    <p class="text-[10px] text-[#F97316] font-bold uppercase tracking-widest mt-1">
-                                        Completed
-                                    </p>
-                                </div>
-                                <div class="project-card-description">
-                                    <p>A UE5 TPS prototype focused on combat, movement.
-                                    </p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 卡片 3 -->
-                    <div class="project-card group block" onclick="goToPage('assets/gamePage/Vulpini/Vulpini.html')">
-                        <div class="project-card-inner h-full">
-                            <div class="project-card-bg bg-neutral-800">
-                                <img src="assets/images/Game/UE_2D/card.png" alt="Escape-01 Screenshot"
-                                    class="w-full h-full object-cover">
+                                <img src="assets/images/Game/UE_2D/card.png" alt="Escape-01 Screenshot" class="w-full h-full object-cover">
                             </div>
                             <div class="project-card-overlay"></div>
                             <div class="project-card-content">
@@ -390,62 +470,15 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <!-- 卡片 4 -->
-                    <div class="project-card group block"
-                        onclick="goToPage('assets/gamePage/BlenderGN/BlenderGN.html')">
-                        <div class="project-card-inner h-full">
-                            <div class="project-card-bg bg-neutral-800">
-                                <img src="assets/images/Blender/GN/card.png" alt="Escape-01 Screenshot"
-                                    class="w-full h-full object-cover">
-                            </div>
-                            <div class="project-card-overlay"></div>
-                            <div class="project-card-content">
-                                <div class="mb-2">
-                                    <h4 class="text-2xl font-black uppercase text-white leading-tight">Blender Geometry
-                                        Node · Entanglement
-                                    </h4>
-                                    <p class="text-[10px] text-[#F97316] font-bold uppercase tracking-widest mt-1">
-                                        Completed
-                                    </p>
-                                </div>
-                                <div class="project-card-description">
-                                    <p>A Blender project focused on procedural design with Geometry Nodes.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 卡片 5 -->
-                    <div class="project-card group block"
-                        onclick="goToPage('assets/gamePage/BlenderAnim/BlenderAnim.html')">
-                        <div class="project-card-inner h-full">
-                            <div class="project-card-bg bg-neutral-800">
-                                <img src="assets/images/Blender/Animation/card.png" alt="Escape-01 Screenshot"
-                                    class="w-full h-full object-cover">
-                            </div>
-                            <div class="project-card-overlay"></div>
-                            <div class="project-card-content">
-                                <div class="mb-2">
-                                    <h4 class="text-2xl font-black uppercase text-white leading-tight">Blender Animation
-                                        · Ouroboros
-                                    </h4>
-                                    <p class="text-[10px] text-[#F97316] font-bold uppercase tracking-widest mt-1">
-                                        Completed
-                                    </p>
-                                </div>
-                                <div class="project-card-description">
-                                    <p>A Blender Animation Project</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
                 </div>
             </div>
 
+
         </div>
+
 
     </section>
 

@@ -465,6 +465,78 @@ nav a.nav-active::after {
     background: #F97316;
 }
 
+.project-banner-card {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    overflow: visible;
+    backdrop-filter: none;
+    transition: none;
+}
+
+.project-banner-card:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.project-banner-top {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.35rem;
+
+}
+
+.project-title-row {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.project-banner-title {
+    font-size: clamp(1.5rem,
+            3vw,
+            2.2rem);
+    font-weight: 900;
+    line-height: 1;
+    color: white;
+    margin: 0;
+    letter-spacing: -0.04em;
+}
+
+.project-banner-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-shrink: 0;
+    margin-left: 1rem;
+}
+
+.project-banner-icon {
+    width: 120px;
+    height: 48px;
+    object-fit: contain;
+    display: block;
+}
+
+.project-banner-image-wrapper {
+    width: 100%;
+    aspect-ratio: 695 / 427;
+    overflow: hidden;
+    background: #111;
+    border-radius: 0;
+}
+
+.project-banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+
+
+
 @keyframes revealAnim {
     to {
         opacity: 1;
